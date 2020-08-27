@@ -1,0 +1,419 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>tdc-d1-02</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h3>Agilidade na Proteção do RunTime da sua Aplicação</h3>
+					<p><small>
+							Aloisio Marinho - aloisio_marinho@trendmicro.com / aloisio.marinho@gmail.com / <a
+								href="https://www.linkedin.com/in/aloisiomarinho">https://www.linkedin.com/in/aloisiomarinho</a>
+						</small>
+					</p>
+				</section>
+				<section>
+					<h2>Agenda</h2>
+					<ul>
+						<li class="fragment fade-up">DevOps</li>
+						<li class="fragment fade-up">Itens importantes para pensar</li>
+						<li class="fragment fade-up">Analisando a aplicação durante o Pipeline</li>
+						<li class="fragment fade-up">Protegendo mais de perto quando não temos uma boa nota para seguir...</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h2>DevOps</h2>
+					<blockquote cite="https://en.wikipedia.org/wiki/DevOps">
+						&ldquo;"a set of practices intended to reduce the time between committing a change to a system and the
+						change being
+						placed into normal production, while ensuring high quality"..&rdquo;
+					</blockquote>
+				</section>
+
+				<section data-background="img/ferrari_brita.jpeg" data-background-size="contain">
+				</section>
+
+				<section data-background="img/devops-security.png" data-background-size="contain">
+				</section>
+
+				<section>
+					<section data-background-iframe="img/security_breaches.png" data-background-size="contain">
+						<div
+							style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+							<h3>Pequenos problemas / Grandes Impactos</h3>
+							<p>Tanto um erro na configuração da aplicação, quanto vulnerabilidades que podem ser exploradas podem ter um alto impacto...</p>
+						</div>
+					</section>
+
+					<section data-background-iframe="https://informationisbeautiful.net/visualizations/worlds-biggest-data-breaches-hacks/" data-background-size="cover">
+						<div
+							style="position: absolute; width: 50%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+							<!-- <h3>Pequenos problemas / Grandes Impactos</h3> -->
+							<p>https://informationisbeautiful.net/visualizations/worlds-biggest-data-breaches-hacks/</p>
+						</div>
+					</section>
+				</section>
+
+				<section>
+					<h3>Coisas para pensar...</h3>
+					<ul>
+						<li class="fragment fade-up">Dependências da minha aplicação?</li>
+						<li class="fragment fade-up">Lint/Testes...</li>
+						<li class="fragment fade-up">Container (issues e configuração)</li>
+						<li class="fragment fade-up">Nível de Log</li>
+						<li class="fragment fade-up">Throttling/Rate Limit</li>
+						<li class="fragment fade-up">Monitoração/Observabilidade/SLI/SLO/SLA</li>
+					</ul>
+				</section>
+
+				<section data-background="img/sun_tzu.jpg" data-background-size="contain">
+				</section>
+
+				<section data-background="img/devops-shift_left.png" data-background-size="contain">
+				</section>
+				
+				<section data-background="img/devops-pipeline.png" data-background-size="contain">
+				</section>
+
+				<section>
+					<section>
+						<h3>Análise de Dependências</h3>
+					</section>
+					<section data-background="img/dependencies.jpg" data-background-size="contain">
+					</section>
+					<section data-background="img/snyk.png" data-background-size="contain">
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>Infrastructure as Code - Scanner</h3>
+					</section>
+					<section data-background="img/infra_as_code.png" data-background-size="contain">
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>Análise dos Containers</h3>
+					</section>
+					<section data-background="img/container_scan.png" data-background-size="contain">
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>Análise de Código - Quality Gates</h3>
+					</section>
+					<section data-background="img/total_recall.gif" data-background-size="contain">
+					</section>
+					<section data-background="img/sonar_1.png" data-background-size="contain">
+					</section>
+					<section data-background="img/sonar_2.png" data-background-size="contain">
+					</section>
+					<section data-background="img/sonar_3.png" data-background-size="contain">
+					</section>
+				</section>
+
+				<section data-background="img/sast-disturbance-in-the-code.png" data-background-size="contain">
+				</section>
+
+				<section data-background="img/sick_bay.jpg" data-background-size="contain">
+				</section>
+
+				<section>
+					<h2>SAST</h2>
+					<p>
+						<a
+							href="https://owasp.org/www-community/Source_Code_Analysis_Tools">https://owasp.org/www-community/Source_Code_Analysis_Tools</a>
+					</p>
+					<blockquote cite="https://en.wikipedia.org/wiki/DevOps">
+						&ldquo;<strong style="color:red">Static application security testing (SAST)</strong> is a set of technologies
+						designed to
+						<strong style="color:red">analyze application source code</strong>, byte
+						code and binaries for coding and design conditions that are indicative of security vulnerabilities. SAST
+						solutions
+						analyze an application from the “inside out” in a nonrunning state.".&rdquo;
+					</blockquote>
+				</section>
+				
+				<!-- <section>
+													<h2>SAST</h2>
+													<ul>
+														<li class="fragment fade-up">Checkmarx</li>
+														<li class="fragment fade-up">Fortify</li>
+														<li class="fragment fade-up">Veracode</li>
+													</ul>
+												</section> -->
+				
+				
+				
+				<section>
+					<h2>DAST</h2>
+					<p>
+						<a
+							href="https://owasp.org/www-community/Vulnerability_Scanning_Tools">https://owasp.org/www-community/Vulnerability_Scanning_Tools</a>
+					</p>
+					<blockquote cite="https://en.wikipedia.org/wiki/DevOps">
+						&ldquo;<strong style="color:red">Dynamic application security testing (DAST)</strong> technologies are designed
+						to detect conditions indicative of a security
+						vulnerability in an application in its <strong style="color:red">running state</strong>.&rdquo;
+					</blockquote>
+				</section>
+				<!-- 
+												<section>
+													<h2>DAST</h2>
+													<ul>
+														<li class="fragment fade-up">WebInspect</li>
+														<li class="fragment fade-up">w3af</li>
+													</ul>
+												</section> -->
+				
+				<!-- <section>
+					<h3>Gartner</h3>
+				
+					<img alt="smart-check_ci-cd" src="img/gartner-sec-app-scan-2020.jpg" width="60%" height="60%"
+						style="border:5px solid white">
+				</section> -->
+				
+				<section>
+					<section data-background="img/case-study.jpg" data-background-size="contain">
+					</section>
+					<section section data-background="img/case-study-dark.jpg" data-background-size="contain">
+						<!-- <h3>Case</h3> -->
+						<ul>
+							<li class="fragment fade-up">Você é o Product Owner do squad de Chat Bot</li>
+							<li class="fragment fade-up">O time esta preocupado com a experiência do usuário...</li>
+						</ul>
+					</section>
+					<section data-background="img/case-01.png" data-background-size="contain">
+					</section>
+					<section data-background="img/case-01_dark.png" data-background-size="contain">
+						<h3>O Problema</h3>
+						<ul>
+							<li>Leva de 12 a 40s para o Bot responder sobre uma pergunta do cliente... :(</li>
+						</ul>
+						<p>O time acredita que precisamos adicionar um componente na arquitetura da aplicação: Cache</p>
+					</section>
+					<section section data-background="img/case-study-dark.jpg" data-background-size="contain">
+						<h3>Quality Control...</h3>
+						<ul>
+							<li class="fragment fade-up">O time de infra/sec esta implantando plataformas para analisar o nível de segurança do
+								containers e código fonte.</li>
+							<li class="fragment fade-up">Eles acharam alguns problemas...</li>
+						</ul>
+					</section>
+					<section data-background="img/case-02.png" data-background-size="contain">
+					</section>
+					<section data-background="img/case-03.png" data-background-size="contain">
+					</section>
+					<section data-background="img/morpheus_.jpg" data-background-size="contain">
+					</section>
+				</section>
+				
+				<section data-background="img/rasp-extraction.jpg" data-background-size="contain">
+				</section>
+				
+				<section>
+					<h2>RASP</h2>
+					<p>
+						<a
+							href="https://owasp.org/www-community/Vulnerability_Scanning_Tools">https://owasp.org/www-community/Vulnerability_Scanning_Tools</a>
+					</p>
+					<blockquote cite="https://en.wikipedia.org/wiki/DevOps">
+						&ldquo;<strong style="color:red">Runtime application self-protection (RASP)</strong style="color:red"> is a
+						security technology that is built or linked into an application or
+						<strong style="color:red">application runtime</strong> environment, and is capable of controlling application
+						execution and detecting and preventing
+						real-time attacks.</strong>.&rdquo;
+					</blockquote>
+				</section>
+				
+				<!-- <section data-background-iframe="img/cloudone-application-security.png" data-background-size="cover">
+					<div
+						style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+						<h2>Cloud One - Application Security</h2>
+						<p>Para proteger aplicações em execução e Serverless, OWASP Top 10 Vulnerabilities, zero-day vulnerabilities,
+							antimalware</p>
+					</div>
+				</section> -->
+
+				<section data-state="customevent">
+					<h2>Configuração - JavaScript</h2>
+					<!-- <p>
+						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
+					</p> -->
+					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+							module.exports = grunt => {
+								require('trend_app_protect');
+								require('elastic-apm-node').start();
+								require('load-grunt-tasks')(grunt);
+								let port = grunt.option('port') || 8000;
+								let root = grunt.option('root') || '.';
+							</code></pre>
+				</section>
+				<!-- <section data-state="customevent">
+					<h2>Configuração - Python</h2>
+					<p>
+										Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
+									</p>
+					<pre><code class="python" data-trim contenteditable style="font-size: 18px;">
+							import trend_app_protect.start
+											</code></pre>
+				</section> -->
+				<section data-background="img/event_example.png" data-background-size="contain">
+				</section>
+				<section data-background="img/dash.png" data-background-size="contain">
+				</section>
+
+				<section>
+					<section>
+						<h3>Benefícios:</h3>
+						<ul>
+							<li class="fragment fade-up">RASP: Simples de implantar, não precisa alterar a aplicação</li>
+							<li class="fragment fade-up">Inspeciona todas as ações da aplicação</li>
+							<li class="fragment fade-up">Aplicações Serverless (lambdas...)</li>
+							<li class="fragment fade-up">Ajuda os desenvolvedores a priorizarem o backlog</li>
+							<li class="fragment fade-up">Pode ser uma ação de mitigação para momentos em que é uma decisão de negócio</li>
+						</ul>
+					</section>
+				
+					<section>
+						<table style="font-size:22px;">
+							<caption><strong>Application Security</strong></caption>
+							<tr>
+								<th scope="col"></th>
+								<th scope="col">RASP</th scope="col">
+								<th scope="col">WAF</th scope="col">
+							</tr>
+							<tr>
+								<td>Accuracy</td>
+								<td>Detection of malicious input only when passed to library calls where exploitation would occur.
+									Monitors
+									inbound and outbound data and logic flows.</td>
+								<td>Detection based on naïve pattern matching, without considering whether the input would be passed to
+									vulnerable code.</td>
+							</tr>
+							<tr>
+								<td>Time to Value</td>
+								<td>No need to know locations of existing vulnerabilities in application code; can act as a virtual
+									patch
+									against a
+									vulnerability.</td>
+								<td>Requires extensive testing and confguration to adequately cover the application.</td>
+							</tr>
+							<tr>
+								<td>Reliability</td>
+								<td>Will not fail open under high load—code is always instrumented, regardless of server load.</td>
+								<td>Single point of failure; likely to fail open under high load, leaving the formerly protected web
+									application vulnerable</td>
+							</tr>
+							<tr>
+								<td>Platforms</td>
+								<td>Any instrumented application.</td>
+								<td>Web applications.</td>
+							</tr>
+							<tr>
+								<td>Visibility</td>
+								<td>May provide detailed feedback to developers to show how to remediate code vulnerabilities.</td>
+								<td>Ofers no detailed insight into the application.</td>
+							</tr>
+							<tr>
+								<td>Network Protocols</td>
+								<td>Protocol agnostic; handles HTTP, HTTPS, AJAX, SQL and SOAP with equal ease.</td>
+								<td>Must be able to understand the application’s network communication.</td>
+							</tr>
+							<tr>
+								<td>Language Coverages</td>
+								<td>Theoretically language agnostic but requires complicated, language-specifc builds—currently known
+									products support .NET
+									and Java.</td>
+								<td>Language agnostic; not bound by programming language type.</td>
+							</tr>
+						</table>
+					</section>
+				</section>
+				
+				<!-- <section>
+					<h2>Serverless</h2>
+				
+					<blockquote cite="https://en.wikipedia.org/wiki/DevOps">
+						&ldquo;<strong style="color:red">Serverless</strong> computing is an emerging software architecture pattern that
+						promises to <strong style="color:red">eliminate the need for infrastructure
+							provisioning and management</strong>. I&O leaders need to adopt an application-centric approach to
+						serverless computing, managing
+						APIs and SLAs, rather than physical infrastructures&rdquo;
+					</blockquote>
+				</section>
+				
+				<section data-background="img/serverless-doc.jpg" data-background-size="contain">
+				</section>
+				
+				<section data-background="img/tech-cafe.png" data-background-size="contain">
+				</section>
+				
+				<section>
+					<h3>Benefícios:</h3>
+					<ul>
+						<li class="fragment fade-up">Não precisa provisionar e manter servidores. :)</li>
+						<li class="fragment fade-up">Custo-eficiência (só tem processamento quando tem algo a processar). :)</li>
+						<li class="fragment fade-up">Da Arquitetura para implantação com muito mais simplicidade. :)</li>
+					</ul>
+				</section> -->
+
+					<section>
+						<h3>Para pensar...</h3>
+						<ul>
+							<li class="fragment fade-up">Devs: se preocupem em medir e em diminuir o máximo as issues de suas aplicações</li>
+							<li class="fragment fade-up">Sec: ações de engajamento - techtalks mostrando as opções em casos de problemas e, principalmente como evitá-los</li>
+							<li class="fragment fade-up">Aplicações tendo um runtime atualizado tendem a ter mais disponibilidade</li>
+							<li class="fragment fade-up">Ter + segurança ajudará em ter mais + disponibilidade</li>
+							<li class="fragment fade-up">Pensarmos em segurança como um aspecto de qualidade das nossas aplicações</li>
+						</ul>
+					</section>
+
+				
+
+				<section>
+					<h2>Obrigado! </h2>
+					<!--	<p style="color:red">e a palavra chave é: Infraestrutura</p>  -->
+					<p>
+						<small>
+						aloisio_marinho@trendmicro.com / aloisio.marinho@gmail.com / <a
+							href="https://www.linkedin.com/in/aloisiomarinho">https://www.linkedin.com/in/aloisiomarinho</a>
+						</small>
+					</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
