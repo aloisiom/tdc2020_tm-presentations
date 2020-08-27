@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+	<html class="sl-root decks export offline loaded">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>V2_Como Aumentar a Visibilidade e Aderência às Boas Práticas na Nuvem</title>
+
+		<meta name="description" content="Slides is a presentation platform for developers built on top of the reveal.js open source HTML presentation framework. We offer a wide range of developer-focused features like step-by-step code highlighting, a CSS editor, LaTeX typesetting and more.">
+
+		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+
+
+
+		<!-- User CSS -->
+		<style id="user-css-output" type="text/css">
+			.reveal .sl-block[data-block-type="line"] {
+  transform: translateZ(0px);
+}
+.reveal .neon-green {
+  filter: drop-shadow(0 0 16px rgba(28, 235, 123, 0.2));
+}
+.reveal .neon-text,
+.reveal section a {
+  color: rgba(28, 235, 123) !important;
+  text-shadow: 0 0 16px rgba(28, 235, 123, 0.4);
+}
+.reveal .neon-text a {
+  color: #fff;
+}
+.reveal .controls button {
+  color: #1ceb7b;
+  filter: drop-shadow(0 0 6px rgba(28, 235, 123, 0.6));
+}
+.reveal .create-deck-button textarea {
+  display: none;
+}
+.reveal .create-deck-button form {
+  z-index: 100;
+  position: relative;
+}
+.reveal .create-deck-button form,
+.reveal .create-deck-button button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 100;
+}
+.reveal .sl-block-content[data-animation-type="slide-left"] {
+  transform: translateX(100px);
+}
+.reveal .drape-scale-down {
+  transform: scaleY(0.1);
+  transition: 0.6s ease 0.2s all;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  overflow: hidden;
+}
+.reveal .present .drape-scale-down {
+  transform: none;
+  border-radius: 0;
+}
+.reveal .main-slide h1,
+.reveal .mono {
+  font-family: "Roboto Mono", sans-serif;
+}
+@keyframes flash-opacity {
+  0%,
+  49% {
+    opacity: 0;
+  }
+  50%,
+  100% {
+    opacity: 1;
+  }
+}
+.reveal .terminal-caret {
+  animation: flash-opacity 1.5s infinite;
+}
+.reveal .extra-line-emphasis .hljs[data-line-numbers]:not([data-line-numbers=""]) tr:not(.highlight-line) {
+  opacity: 0.3;
+}
+.reveal .progress {
+  height: 4px;
+  display: none !important;
+}
+.reveal .media-shadow {
+  box-shadow: 0 4px 10px -5px rgba(0, 0, 0, 0.5), 0 15px 30px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+.reveal .media-shadow img,
+.reveal .media-shadow video {
+  border-radius: 4px;
+}
+.custom-styled-slide-number .reveal .slide-number {
+  padding: 0;
+  line-height: 32px;
+  min-width: 32px;
+  font-size: 16px;
+  border-radius: 16px;
+  text-align: center;
+  color: #fff;
+  background-color: #4da2e1;
+}
+@-webkit-keyframes float-animation {
+  0% {
+    -webkit-transform: translate(0, 0px);
+  }
+  65% {
+    -webkit-transform: translate(0, 25px);
+  }
+  100% {
+    -webkit-transform: translate(0, 0px);
+  }
+}
+@-moz-keyframes float-animation {
+  0% {
+    -moz-transform: translate(0, 0px);
+  }
+  65% {
+    -moz-transform: translate(0, 25px);
+  }
+  100% {
+    -moz-transform: translate(0, 0px);
+  }
+}
+@keyframes float-animation {
+  0% {
+    transform: translate(0, 0px);
+  }
+  65% {
+    transform: translate(0, 25px);
+  }
+  100% {
+    transform: translate(0, 0px);
+  }
+}
+.reveal .float-animation {
+  -webkit-animation: float-animation 5s infinite ease-in-out;
+  animation: float-animation 5s infinite ease-in-out;
+}
+@-webkit-keyframes highlight-feature {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: scale(1);
+  }
+  40% {
+    -webkit-transform: scale(1.1);
+  }
+  60% {
+    -webkit-transform: scale(0.95);
+  }
+}
+@keyframes highlight-feature {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.1);
+  }
+  60% {
+    transform: scale(0.95);
+  }
+}
+.reveal .fragment.slide-up {
+  -webkit-transform: translateY(20px);
+  transform: translateY(20px);
+}
+.reveal .fragment.slide-up.visible {
+  -webkit-transform: none;
+  transform: none;
+}
+.reveal .highlight-feature {
+  opacity: 0;
+  -webkit-transform: scale(1.4);
+  transform: scale(1.4);
+  -webkit-transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) 1s;
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) 1s;
+}
+.reveal section.present .highlight-feature {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+  -webkit-animation: highlight-feature 1s infinite both ease-out;
+  animation: highlight-feature 1s infinite both ease-out;
+}
+.reveal .slide-up-intro,
+.reveal .slide-up-intro-2,
+.reveal .slide-up-intro-3 {
+  opacity: 0;
+  -webkit-transform: translateY(20px);
+  transform: translateY(20px);
+  -webkit-transition: all 0.6s ease 0.6s;
+  transition: all 0.6s ease 0.6s;
+}
+.reveal .slide-up-intro-2 {
+  -webkit-transition: all 0.6s ease 0.7s;
+  transition: all 0.6s ease 0.7s;
+}
+.reveal .slide-up-intro-3 {
+  -webkit-transition: all 0.6s ease 1.2s;
+  transition: all 0.6s ease 1.2s;
+}
+.reveal section.present .slide-up-intro,
+.reveal section.present .slide-up-intro-2,
+.reveal section.present .slide-up-intro-3 {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+}
+.reveal section.has-dark-background a {
+  color: #1baee1;
+}
+.reveal .progress span {
+  background: #1ceb7b !important;
+}
+
+		</style>
+	</head>
+	<body class="reveal-viewport theme-font-montserrat theme-color-black-mint">
+		<div class="reveal">
+			<div class="slides">
+				<section data-id="42630259e21cc1bbb7cb41d9695ab5a2" class="main-slide" data-background-color="#000000">
+
+
+
+
+
+<div class="sl-block sl-block-group" data-block-type="group" data-block-id="638d247848d667180f6bc2c804e4fd82" style="height: auto;"><div class="sl-block-content sl-block-group-content" style="transform-origin: 559px 280px; z-index: 10;">
+<div class="sl-block sl-block-group" data-block-type="group" data-block-id="23bf6861951586737ccbcaf45d3b62b9" style="height: auto;"><div class="sl-block-content neon-text sl-block-group-content" style="transform-origin: 559px 280px; z-index: 11;">
+<div class="sl-block" data-block-type="text" data-block-id="c2d15904c00ac26281b859d58fcf95a0" style="height: auto; width: 736px; left: 191px; top: 45px;"><div class="sl-block-content trade" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; color: rgb(28, 235, 123); font-size: 97%; text-align: left;">
+<h1><span style="font-size:1.0em">Como aumentar a Visibilidade e aderência às Boas Práticas na Nuvem</span></h1>
+</div></div>
+
+
+</div></div>
+
+
+
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-f3f504" data-block-id="53bf7331206d347062738e0d0f0e2c0b" style="height: auto; width: 689px; left: 191px; top: 603.5px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 59%;">
+<p>Aloísio Marinho - aloisio_marinho@trendmicro.com / aloisio.marinho@gmail.com / <a href="https://www.linkedin.com/in/aloisiomarinho" target="_blank">https://www.linkedin.com/in/aloisiomarinho</a></p>
+</div></div></section><section data-id="6853ab1797a70ded6fb9cae34cf9cf47"><div class="sl-block" data-block-type="text" style="width: 807px; left: 73px; top: 175px; height: auto;" data-block-id="1af99780ac888e084e07fa125532bbd0"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; color: rgb(28, 235, 123);">
+<h2>Agenda</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 807px; left: 73px; top: 282px; height: auto;" data-block-id="25ad6b7fd7a7037ff185ee3e885ddf4d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 120%;">
+<ul>
+	<li>Visibilidade</li>
+	<li>Ambiente Volátil</li>
+	<li>Perguntas comuns</li>
+	<li>Infraestrutura como Código</li>
+	<li>Best Practices </li>
+	<li>Well Architected Framework</li>
+	<li>Exemplos</li>
+</ul>
+</div></div></section><section data-id="7a1cc7318e9013aef36409299c1ae5f6" data-background-image="slides-for-developers/3e4931a0e8c2be60011ff4f2a32cc87d.jpeg" data-background-size="contain"></section><section data-id="2523f0c4ceb25a0f01d3a76cc39d4971" data-background-image="slides-for-developers/3c85087c691224e91c02a4b1e7b95785.jpeg" data-background-size="contain"></section><section data-id="ee796644b59c12829a68c35a20624966" data-background-size="contain" data-background-image="slides-for-developers/6b7f3db43ae97ba039266de7e1f57a3a.gif"></section><section data-id="bcf3291bd0659121dd417d84f86e17c8"><div class="sl-block" data-block-type="text" style="width: 807px; left: 78px; top: 189px; height: auto;" data-block-id="08c6c2fc59765ae8996412394d06b7ee"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; color: rgb(28, 235, 123);">
+<h2>Perguntas Comuns</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 807px; left: 79px; top: 280px; height: auto;" data-block-id="ee00f8bd8bae8fce59771df0288b89d7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 140%; transition-duration: 0.6s; transition-delay: 0.6s;" data-animation-type="fade-in" data-animation-trigger-id="self">
+<ul>
+	<li>Quanto estou usando/gastando?</li>
+	<li>
+	<p>Que serviços estou usando e onde?</p>
+	</li>
+	<li>
+	<p>Estou usando bem?</p>
+	</li>
+	<li>
+	<p>Como está o meu nível de exposição?</p>
+	</li>
+	<li>
+	<p>O que posso fazer para corrigir?</p>
+	</li>
+</ul>
+</div></div></section><section class="stack" data-id="d985a11ba5a4da8a123ced03ba4c5bf5"><section data-id="3fe6a57319f633395dcaca4a3fb0457e"><div class="sl-block" data-block-type="text" style="width: 921px; left: 29px; top: 84px; height: auto;" data-block-id="1f2c1a351e176b60a655c531e8f378dc">
+<div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 10; color: rgb(28, 235, 123);" dir="ui">
+<h2>Sim. Tudo Falha, o Tempo Todo!</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 10;" class="_1KJtL"></grammarly-extension>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 439.64px; height: 293.093px; left: 520.36px; top: 237.573px; min-width: 1px; min-height: 1px;" data-block-id="f9e63abfae3afbbb3515b47a7ef395cc"><div class="sl-block-content" style="z-index: 11;"><img data-natural-width="1200" data-natural-height="800" style="" data-lazy-loaded="" data-src="slides-for-developers/f541d07af932d59fcf19bd94a286bed1.jpg"></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-c87231" data-block-id="5994407f53a6c00f741ced48cfa4f402" style="height: auto; width: 442px; left: 6px; top: 301.833px;"><div class="sl-block-style" style="z-index: 12; opacity: 0.9;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; text-align: left; background-color: rgb(34, 34, 34); color: rgb(255, 255, 255);" data-has-custom-html="">
+<figure class="quote">
+<blockquote><span style="font-size:1.4em;">Everything fails, all the time...</span></blockquote>
+
+<figcaption><span style="font-size:1.0em;">— Weger Vogels, <cite>Amazon CTO</cite></span></figcaption>
+</figure>
+</div></div></div>
+<div class="sl-block" data-block-type="text" data-name="text-a4999c" data-block-id="94fb140ea531ba92eadeba504bdfa6a7" style="height: auto; width: 330px; left: 315px; top: 630px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; font-size: 59%;">
+<p><a href="https://twitter.com/Werner?s=20" target="_blank">https://twitter.com/Werner?s=20</a></p>
+</div></div></section><section data-id="928bf21af29ff3714b1a8467627aff7d"><div class="sl-block" data-block-type="iframe" data-name="iframe-29b5bd" data-block-id="ef383e19d2d2b12fae44233ef7524560" style="width: 656px; height: 546.667px; left: 152px; top: 76.6665px;"><div class="sl-block-content" style="z-index: 10;"><iframe webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" sandbox="allow-forms allow-scripts allow-popups allow-same-origin allow-pointer-lock allow-presentation" data-lazy-loaded="" data-autoplay="" data-preload="true" data-src="https://www.youtube.com/embed/L4NS1Lg6KOk?enablejsapi=1"></iframe></div></div></section></section><section data-id="daf616498e401008a93081facc4923e0" data-background-image="slides-for-developers/b2a36a7c06bc4ee4ab6c2692adcefbda.gif" data-background-size="contain"></section><section class="stack" data-id="7394b77e84fea982b81efeb1516c8725"><section data-id="fb5a6255425932ecc8a3420c8d2b6f60"><div class="sl-block" data-block-type="text" style="width: 807px; left: 80px; top: 180px; height: auto;" data-block-id="13383d86cadb07e636c688f5d5f62c0c" data-name="text-3f0000"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10; font-size: 76%; color: rgb(28, 235, 123);">
+<h1 style="text-align:left">Infraestrutura como Código</h1>
+</div></div></section><section data-id="21c496504d4aed6b698fc3152c193088"><div class="sl-block" data-block-type="text" style="width: 807px; left: 80px; top: 136px; height: auto;" data-block-id="7158205f37aa3719f481fcff7e3b4b0c"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10; font-size: 76%; color: rgb(28, 235, 123);">
+<h1 style="text-align:left">Infraestrutura como Código</h1>
+</div></div>
+<div class="sl-block" data-block-type="code" data-name="code-602b98" style="width: 404.795px; height: 181px; left: 51.6025px; top: 280px;" data-block-id="e75a5e5984352ceba71f43656f28a7a8"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="osx" style="z-index: 11;"><pre style="font-size: 16px; line-height: 19px;" class="yaml"><code data-line-numbers="">Resources:
+ S3Bucket:
+  Type: AWS::S3::Bucket
+  Properties:
+	Bucketname: this-is-a-s3-bucket</code></pre></div></div>
+<div class="sl-block" data-block-type="code" style="width: 404.795px; height: 248px; left: 531.602px; top: 280px;" data-name="code-6d19d2" data-block-id="29d971dc3d71ae06b44a8763b05c087d"><div class="sl-block-content notranslate" data-highlight-theme="monokai" data-code-frame="osx" style="z-index: 12;"><pre style="font-size: 16px; line-height: 19px;" class="json"><code data-line-numbers="">resource "aws_s3_bucket" "b" {
+ bucket = "my-tf-test-bucket"
+ acl    = "private"
+ 
+ tags = {
+  Name		 = "My bucket"
+  Environment = "Dev"
+  }
+}  </code></pre></div></div></section><section data-id="abe02a608bcec3aefedbe62753fe2e4a"><div class="sl-block" data-block-type="text" style="width: 807px; left: 77px; top: 189px; height: auto;" data-block-id="360408241a7f968d9178d838a019e265"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; color: rgb(28, 235, 123);">
+<h2>Benefícios Claros</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 807px; left: 76.5px; top: 280px; height: auto;" data-block-id="3aba573f555483b671623c38675da183">
+<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; transition-duration: 0.6s; transition-delay: 0.6s; font-size: 140%;" data-animation-type="fade-in" dir="ui"><ul>
+<li>Automação</li>
+<li>Velocidade</li>
+<li>Versionamento da Infra</li>
+<li>Mitigação de Risco</li>
+</ul></div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 11;" class="_1KJtL"></grammarly-extension>
+</div></section><section data-id="d59a7ece3d77a9a34befd70b39fcd891"><div class="sl-block" data-block-type="image" style="width: 660.03px; height: 449px; left: 149.985px; top: 125.5px; min-width: 1px; min-height: 1px;" data-block-id="4441f79284e33e79fa6f1a569a63d061"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="735" data-natural-height="500" data-lazy-loaded="" data-src="slides-for-developers/16316ac1be7fbb9e994892abd9405223.jpeg"></div></div></section></section><section class="stack" data-id="a134103c01891ff30d5ece49c5a487ba"><section data-id="825702a2e5b36864557fdb2397b60030"><div class="sl-block" data-block-type="text" style="width: 807px; left: 77px; top: 266px; height: auto;" data-block-id="d5760e18fcda9a00b4b8f8c2d0e912c0"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10; color: rgb(28, 235, 123);">
+<h1>Best Practices</h1>
+
+<p> </p>
+</div></div></section><section data-id="440d3cecb0a1c890adf4b870884e2f37"><div class="sl-block" data-block-type="text" style="width: 807px; left: 73px; top: 71px; height: auto;" data-block-id="44c16acb895f4ec255093285bd39f83d"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10; color: rgb(28, 235, 123);">
+<h1>Você conhece o Well-Architected Framework?</h1>
+</div></div>
+<div class="sl-block" data-block-type="image" data-name="image-758ab7" style="width: 320px; height: 250.404px; left: 320px; top: 404px; min-width: 1px; min-height: 1px;" data-block-id="b1680fae26fa1c58d5346951b2d23e55"><div class="sl-block-content" style="z-index: 11; border-style: solid; border-width: 1px; border-color: rgb(28, 235, 123);"><img data-natural-width="446" data-natural-height="349" style="" data-lazy-loaded="" data-src="slides-for-developers/c2cc22193a2864035cd0d9570b60bf1d.gif"></div></div></section><section data-id="c501f9432fc2936b989b079908108895"><div class="sl-block" data-block-type="text" style="width: 807px; left: 77px; top: 142px; height: auto;" data-block-id="5d96728ee543e2a34f1df2720ae26962"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10; color: rgb(28, 235, 123);">
+<h1>Best Practices</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 807px; left: 77px; top: 245px; height: auto;" data-block-id="77f186234719144ced86a68460cf800c">
+<div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11; font-size: 50%;" dir="ui">
+<h2>Avalie até que ponto a arquitetura está alinhada às melhoras práticas da AWS e AZURE</h2>
+
+<h2>Automatize a aderência ao Well-Architecture</h2>
+</div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 11;" class="_1KJtL"></grammarly-extension>
+</div>
+<div class="sl-block sl-block-group" data-block-type="group" data-name="group-96c604" data-block-id="718a6940e1e44260d84fdaf8d39872d5"><div class="sl-block-content sl-block-group-content" style="transform-origin: 480.779px 513px; z-index: 12;"><div class="sl-block sl-block-group" data-block-type="group" data-name="group-839a12" data-block-id="7d1f54f8867957d9f2013afbe1d33021"><div class="sl-block-content sl-block-group-content" style="transform-origin: 480.779px 513px; z-index: 13;">
+<div class="sl-block" data-block-type="image" data-name="image-9a561d" data-block-id="f8ae2978c812ab3999d566b9cc4d03eb" style="width: 146.142px; height: 167.376px; left: 81.5585px; top: 429.202px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 14;"><img data-natural-width="468" data-natural-height="536" style="" data-lazy-loaded="" data-src="slides-for-developers/6bf0cb2de7795bf37da8bfa81c300616.JPG"></div></div>
+<div class="sl-block" data-block-type="image" data-name="image-d81dd3" data-block-id="415c45ec1256b2764e281f3eac0b7a04" style="width: 146.686px; height: 167.596px; left: 241.558px; top: 429.202px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 15;"><img data-natural-width="463" data-natural-height="529" style="" data-lazy-loaded="" data-src="slides-for-developers/fa7d2df5a08ce2e7e84973b584feee5e.JPG"></div></div>
+<div class="sl-block" data-block-type="image" data-name="image-390eca" data-block-id="0d30e53d4d23dd91ea06de98f2e19a2c" style="width: 149.151px; height: 167.596px; left: 401.558px; top: 429.202px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 16;"><img data-natural-width="469" data-natural-height="527" style="" data-lazy-loaded="" data-src="slides-for-developers/a466676d32bc1538a816e165d1eec36e.JPG"></div></div>
+<div class="sl-block" data-block-type="image" data-name="image-1df19f" data-block-id="bbc6246b6168ef2d2f9f5fd999aeb2dd" style="width: 149.359px; height: 167.596px; left: 570.743px; top: 429.202px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 17;"><img style="" data-natural-width="475" data-natural-height="533" data-lazy-loaded="" data-src="slides-for-developers/ee216e21abfffef90a5062b881486bdc.JPG"></div></div>
+<div class="sl-block" data-block-type="image" data-name="image-3cb4fd" data-block-id="a33f36b8acc3e820a60b8ace56f660bb" style="width: 145.586px; height: 167.376px; left: 734.414px; top: 429.202px; min-width: 1px; min-height: 1px;"><div class="sl-block-content" style="z-index: 18;"><img style="" data-natural-width="461" data-natural-height="530" data-lazy-loaded="" data-src="slides-for-developers/705a8ca94b4ce0ee642b120115134d7d.JPG"></div></div>
+</div></div></div></div></section><section data-id="cd1e1fc2a6db60721f6e13ff306b1c61"><div class="sl-block" data-block-type="text" style="width: 807px; left: 80px; top: 123px; height: auto;" data-block-id="d25a32c6e6654678170d39bf02c5762d"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>AWS Well-Architected Framework</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 807px; left: 80px; top: 280px; height: auto;" data-block-id="12f7ad556d50d7d9dfc0b6aec27b5ed3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 120%; transition-duration: 0.6s; transition-delay: 0.6s;" data-animation-type="fade-in">
+<ul>
+	<li>Melhores Práticas de Arquitetura</li>
+	<li>Aumenta as changes de sucesso</li>
+	<li>Para pessoas técnicas
+	<ul>
+		<li>Nós!</li>
+		<li>Arquiteto</li>
+		<li>DevOps</li>
+		<li>SRE</li>
+	</ul>
+	</li>
+</ul>
+</div></div></section><section data-id="86d3baeaf76ed26c47172729e9771682"><div class="sl-block" data-block-type="text" style="width: 807px; left: 77px; top: 189px; height: auto;" data-block-id="78a8a6a40ea2b4a7714277d20ac4ccce"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; color: rgb(28, 235, 123);">
+<h2>Os 5 Pilares</h2>
+</div></div>
+<div class="sl-block sl-block-group" data-block-type="group" data-name="group-96c604" data-block-id="6d48b85eede768fd2d87505e73613e4e"><div class="sl-block-content sl-block-group-content" style="transform-origin: 469.779px 406.202px; z-index: 11;"><div class="sl-block sl-block-group" data-block-type="group" data-name="group-839a12" data-origin-id="7d1f54f8867957d9f2013afbe1d33021" data-block-id="64ebb26422a70013f21de909b6ecb2d7"><div class="sl-block-content sl-block-group-content" style="transform-origin: 469.779px 406.202px; z-index: 12;">
+<div class="sl-block" data-block-type="image" data-name="image-9a561d" style="width: 146.142px; height: 167.376px; left: 70.5585px; top: 322.404px; min-width: 1px; min-height: 1px;" data-origin-id="f8ae2978c812ab3999d566b9cc4d03eb" data-block-id="e5416babc87840d82e781840e25bf77b"><div class="sl-block-content" style="z-index: 13;"><img data-natural-width="468" data-natural-height="536" style="" data-lazy-loaded="" data-src="slides-for-developers/6bf0cb2de7795bf37da8bfa81c300616.JPG"></div></div>
+<div class="sl-block" data-block-type="image" data-name="image-d81dd3" style="width: 146.686px; height: 167.596px; left: 230.558px; top: 322.404px; min-width: 1px; min-height: 1px;" data-origin-id="415c45ec1256b2764e281f3eac0b7a04" data-block-id="7e37254b769bdb7573981fd52b72a0c6"><div class="sl-block-content" style="z-index: 14;"><img data-natural-width="463" data-natural-height="529" style="" data-lazy-loaded="" data-src="slides-for-developers/fa7d2df5a08ce2e7e84973b584feee5e.JPG"></div></div>
+<div class="sl-block" data-block-type="image" data-name="image-390eca" style="width: 149.151px; height: 167.596px; left: 390.558px; top: 322.404px; min-width: 1px; min-height: 1px;" data-origin-id="0d30e53d4d23dd91ea06de98f2e19a2c" data-block-id="61eaf538092bf53fa608a1c66137e9dc"><div class="sl-block-content" style="z-index: 15;"><img data-natural-width="469" data-natural-height="527" style="" data-lazy-loaded="" data-src="slides-for-developers/a466676d32bc1538a816e165d1eec36e.JPG"></div></div>
+<div class="sl-block" data-block-type="image" data-name="image-1df19f" style="width: 149.359px; height: 167.596px; left: 559.743px; top: 322.404px; min-width: 1px; min-height: 1px;" data-origin-id="bbc6246b6168ef2d2f9f5fd999aeb2dd" data-block-id="e66c77aae92e6c024cb580c4a40d4dc4"><div class="sl-block-content" style="z-index: 16;"><img style="" data-natural-width="475" data-natural-height="533" data-lazy-loaded="" data-src="slides-for-developers/ee216e21abfffef90a5062b881486bdc.JPG"></div></div>
+<div class="sl-block" data-block-type="image" data-name="image-3cb4fd" style="width: 145.586px; height: 167.376px; left: 723.414px; top: 322.404px; min-width: 1px; min-height: 1px;" data-origin-id="a33f36b8acc3e820a60b8ace56f660bb" data-block-id="af29e7d4ac3d4a11e63e82954b884ff4"><div class="sl-block-content" style="z-index: 17;"><img style="" data-natural-width="461" data-natural-height="530" data-lazy-loaded="" data-src="slides-for-developers/705a8ca94b4ce0ee642b120115134d7d.JPG"></div></div>
+</div></div></div></div></section><section data-id="0dfa3d1b585fb23ef529ed8348ac2b65" data-background-iframe="https://wa.aws.amazon.com/wat.map.en.html" data-background-interactive="true" data-preload=""></section><section data-id="e2e3a48a2767790ac623d56e25a7cfd1"><div class="sl-block" data-block-type="text" style="width: 807px; left: 77px; top: 189px; height: auto;" data-block-id="d2b94e25f37ba006f6a31ecce59d636f"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>É excelente! Mas...</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 807px; left: 77px; top: 280px; height: auto;" data-block-id="804198836f1b1a773f10e3a2d80034d4"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 120%; transition-duration: 0.6s; transition-delay: 0.6s;" data-animation-type="fade-in">
+<ul>
+	<li>É bem longo</li>
+	<li>Uma coleção de perguntas</li>
+	<li>Pouco "passo a passo"</li>
+	<li>Bem teórico</li>
+</ul>
+</div></div></section><section data-id="8079eaf876b15947bf1de06fdaf7f993"><div class="sl-block" data-block-type="text" style="width: 807px; left: 77px; top: 139px; height: auto;" data-block-id="6374d64f095d18f05b7318cf16393e05"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; color: rgb(28, 235, 123);">
+<h2>Exemplos</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 807px; left: 77px; top: 230px; height: auto;" data-block-id="05a4df263c96b44fa4efb4acf7c89922">
+<div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; transition-duration: 0.6s; transition-delay: 0.6s;" data-animation-type="fade-in" dir="ui"><ul>
+<li>REL6: How do you back up data?<ul><li>Sem snapshots do DynamoDB por padrão<br><br>
+</li></ul>
+</li>
+<li>PERF6: How do you evolve your workload to take advantage of new releases?<ul><li>EC2 T3 5-40% mais rápido que T2, rede/EBS burst<br><br>
+</li></ul>
+</li>
+<li>SEC9: How do you protect your data at rest?<ul><li>Buckets S3 não são criptografados por padrão</li></ul>
+</li>
+</ul></div>
+<grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 11;" class="_1KJtL"></grammarly-extension><grammarly-extension style="position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 11;" class="_1KJtL"></grammarly-extension>
+</div></section></section><section data-id="3f6917c990cecb69d528c0f83b46de87" data-background-image="slides-for-developers/c654841ce06dd5c2052204b706327cf5.gif" data-background-size="contain">
+</section><section data-id="704de2dbd699d19451f5b44c2f9d4585"><div class="sl-block" data-block-type="text" style="width: 840px; left: 60.5px; top: 173px; height: auto;" data-block-id="f28a1099c762722b9c0db923f1b0fe1a"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; color: rgb(28, 235, 123);">
+<h2>Como ajudar nesse cenário?</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 807px; left: 77px; top: 280px; height: auto;" data-block-id="574b2349824652ffa10aa7d06bc0f508"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 140%; transition-duration: 0.6s; transition-delay: 0.6s;" data-has-custom-html="" data-animation-type="fade-in">
+<ul>
+	<li>Visibilidade
+	<ul>
+		<li>Boas Práticas</li>
+		<li>Misconfiguration</li>
+		<li>Security</li>
+		<li>Conformidade</li>
+		<li>Governança</li>
+		<li>Custo</li>
+	</ul>
+	</li>
+</ul>
+</div></div></section><section class="stack" data-id="3ae9f327f9be5376abc07be56829f074"><section data-id="e41281bd077ab39b542e332a690f58d7"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="3236b28badad7ef1e9e1a8cbbdae3972"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10; color: rgb(28, 235, 123);">
+<h1>Knowledge Base</h1>
+</div></div></section><section data-id="8a7cb3368e4b7cdbac1e39e26586e3c4"><div class="sl-block" data-block-type="text" style="width: 829px; left: 65.5px; top: 140px; height: auto;" data-block-id="d751f68798a67540dd1571bb54c701a7"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Knowledge base</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 807px; left: 76.5px; top: 247.5px; height: auto;" data-block-id="9ecde098e860c680738638e5953a6675"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 120%;">
+<ul>
+	<li>Ferramenta Educacional</li>
+	<li>Melhores Práticas para AWS e Azure</li>
+	<li>Passo a Passo
+	<ul>
+		<li>Dashboard ou CLI</li>
+	</ul>
+	</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-7d3bfd" style="height: auto; width: 739px; left: 110.5px; top: 478.5px;" data-block-id="7104ab40300026b308e91218afbc17a7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 60%;">
+<p><a href="https://www.cloudconformity.com/knowledge-base/" target="_blank">https://www.cloudconformity.com/knowledge-base/</a></p>
+</div></div></section><section data-auto-animate="" data-id="31814fca671373ce135fea6bb0f75a68">
+
+
+<div class="sl-block" data-block-type="image" data-name="image-2213dd" style="width: 598.156px; height: 454.685px; left: 180.922px; top: 128.157px; min-width: 1px; min-height: 1px;" data-block-id="3332832b360ba587637e7d59906801c0"><div class="sl-block-style" style="z-index: 10; transform: rotate(0deg);"><div class="sl-block-content fragment" style="z-index: 10; box-shadow: rgba(70, 70, 70, 0.32) 5px 4px 7px 1px;" data-fragment-index="0"><img style="" data-natural-width="1109" data-natural-height="843" data-lazy-loaded="" data-src="slides-for-developers/f9bcf5ab974da926764bfb2a91523874.png"></div></div></div>
+<div class="sl-block" data-block-type="image" data-name="image-1f6ceb" style="width: 560.94px; height: 534.924px; left: 199.53px; top: 88.038px; min-width: 1px; min-height: 1px;" data-block-id="1d942a032f71d5b672ec08a3e46b5b04"><div class="sl-block-style" style="z-index: 11; transform: rotate(0deg);"><div class="sl-block-content fragment" style="z-index: 11; box-shadow: rgba(70, 70, 70, 0.32) 5px 4px 7px 1px;" data-fragment-index="1"><img data-natural-width="884" data-natural-height="843" style="" data-lazy-loaded="" data-src="slides-for-developers/11803ac0d81623a90f7c64b354561a7f.png"></div></div></div>
+<div class="sl-block" data-block-type="image" data-name="image-aa40c4" style="width: 560.94px; height: 454.685px; left: 199.53px; top: 128.157px; min-width: 1px; min-height: 1px;" data-block-id="6845ef7d571335df9aaa9ad39aa38b92"><div class="sl-block-content fragment" style="z-index: 12; box-shadow: rgba(70, 70, 70, 0.32) 5px 4px 7px 1px;" data-fragment-index="2"><img style="" data-natural-width="1040" data-natural-height="843" data-lazy-loaded="" data-src="slides-for-developers/0f3d885a26c2e77a84617a6719655b93.png"></div></div>
+
+
+<div class="sl-block sl-block-group" data-block-type="group" data-name="group-9e5990" data-block-id="3bc161e3c8b30bcd225f86f60fef35f5"><div class="sl-block-content sl-block-group-content" style="transform-origin: 480px 355.5px; z-index: 13;">
+<div class="sl-block" data-block-type="image" data-name="image-6ec8b3" style="width: 561.374px; height: 549px; left: -21.785px; top: 81px; min-width: 1px; min-height: 1px;" data-block-id="9ae74f0eb5db3552f221d299893819e7"><div class="sl-block-style" style="z-index: 16; transform: rotate(0deg);"><div class="sl-block-content fragment" style="z-index: 16; box-shadow: rgba(70, 70, 70, 0.32) 5px 4px 7px 1px;" data-fragment-index="3"><img style="" data-natural-width="862" data-natural-height="843" data-lazy-loaded="" data-src="slides-for-developers/7fd30cc6551371f54f0ab5dcd841b07a.png"></div></div></div>
+<div class="sl-block" data-block-type="image" data-name="image-a8a1a4" style="width: 442.196px; height: 549px; left: 539.589px; top: 81px; min-width: 1px; min-height: 1px;" data-block-id="bfa8348b3275e4deb77b9d19240c23e1"><div class="sl-block-content fragment" style="z-index: 17; box-shadow: rgba(70, 70, 70, 0.32) 5px 4px 7px 1px;" data-fragment-index="4"><img style="" data-natural-width="679" data-natural-height="843" data-lazy-loaded="" data-src="slides-for-developers/d6dd0ee15e393b8e921c40a188e3b15d.png"></div></div>
+</div></div></section></section><section data-id="ac03df140758bbd5b9b6c1cce03c2eb5"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 189px; height: auto;" data-block-id="37cdf0350d23a34cd1a8ddcc00d100ba"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10; color: rgb(28, 235, 123);">
+<h1>Exemplo 1</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 286px; height: auto;" data-block-id="13229227875445dd162fe0de18d3e675"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11;">
+<h2>Visões</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 343px; left: 309.5px; top: 420px;" data-block-id="7868cd426c1197563d04f13c84ea45cc" data-name="text-a56858"><div class="sl-block-content fade-out" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; background-color: rgba(0, 0, 0, 0.75); border-style: solid; border-width: 1px; transition-duration: 0.6s; font-size: 70%; transition-delay: 0.8s;" data-animation-type="fade-in">
+<h1>Demo Time!</h1>
+</div></div></section><section data-id="c7705e3b3fe3b814b78ef35e8991b83d"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 189px; height: auto;" data-block-id="458c2bb4ad1f9fd43e7ba08dfd73ba4c"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10; color: rgb(28, 235, 123);">
+<h2>Visibilidade + Agilidade</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 280px; height: auto;" data-block-id="b7f883d1fd5ec818998f432bd7106601"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 140%;">
+<ul>
+	<li>Plataformas?</li>
+	<li>Como evitar e-mails com relatórios que ninguém lê?</li>
+	<li>Mais uma console para as pessoas olharem?</li>
+	<li>Tem como os times validarem suas configurações?</li>
+</ul>
+</div></div></section><section class="stack" data-id="02241cad5622eef47207bdb870e8d968"><section data-id="e1b7131df3b805c974aacad444e19662"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 189px; height: auto;" data-block-id="d4cef4df089b1ad8c8e37afeb754d872"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10; color: rgb(28, 235, 123);">
+<h1>Exemplo 2</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 286px; height: auto;" data-block-id="866dacef2d20c30077527734d3a940c2"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11;">
+<h2>Agilidade</h2>
+
+<h3>Chat Bot</h3>
+</div></div>
+</section><section data-id="7906ee2e038cc9ca240d9266532d87d2" data-background-image="slides-for-developers/f7b6c35933f750fa02dfa6405b4afaf3.PNG" data-background-size="contain"></section></section><section data-id="74c6fdb71dc79ad6c4240c63bc287d11"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 189px; height: auto;" data-block-id="cfec819c7e8b7de13d14bd40f0e64d38"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10; color: rgb(28, 235, 123);">
+<h1>Exemplo 3</h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 286px; height: auto;" data-block-id="c5dd46b311ad6ee6948500d68aabe646"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Subtitle" style="z-index: 11;">
+<h2>Agilidade</h2>
+
+<h3>IaC Scanner</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 343px; left: 308.5px; top: 455px;" data-name="text-a56858" data-block-id="5f60d8e228ad1ff4d6696a384ab01193"><div class="sl-block-content fade-out" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; background-color: rgba(0, 0, 0, 0.75); border-style: solid; border-width: 1px; transition-duration: 0.6s; font-size: 70%; transition-delay: 0.8s;" data-animation-type="fade-in">
+<h1>Demo Time!</h1>
+</div></div></section><section data-id="333acbae9cc2ce71d47f690f04e09c86"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 266px; height: auto;" data-block-id="687edc50c296933d4e7264377c3843c1"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10; color: rgb(28, 235, 123);">
+<h1>OBRIGADO!</h1>
+
+<p><span style="font-size:1.2em">Palavra Chave: Cloud One</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-name="text-f3f504" style="height: auto; width: 689px; left: 135.5px; top: 467.5px;" data-block-id="6d91a7f0a3b96c7ae5f700bad2c36827"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 59%;">
+<p>Aloísio Marinho - aloisio_marinho@trendmicro.com / aloisio.marinho@gmail.com / <a href="https://www.linkedin.com/in/aloisiomarinho" target="_blank">https://www.linkedin.com/in/aloisiomarinho</a></p>
+</div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 0px; min-height: 0px; left: 283px; top: 14.5px;" data-block-id="e76486e008ba217782b66a6b348dd0b8" data-name="line-ee02ec"><div class="sl-block-content neon-green" data-line-x1="0" data-line-y1="0" data-line-x2="1492" data-line-y2="0" data-line-color="#1ceb7b" data-line-start-type="none" data-line-end-type="none" style="z-index: 12;" data-line-width="4px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="1492" height="1" viewbox="0 0 1492 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="0" y1="0" x2="1492" y2="0"></line><line class="line-element" stroke="#1ceb7b" stroke-width="4" x1="0" y1="0" x2="1492" y2="0"></line></svg></div></div></section>
+			</div>
+		</div>
+
+		<script>
+			var SLConfig = {"deck": {"id":1910899,"slug":"slides-for-developers","title":"V2_Como Aumentar a Visibilidade e Aderência às Boas Práticas na Nuvem","description":"Slides is a presentation platform for developers built on top of the reveal.js open source HTML presentation framework. We offer a wide range of developer-focused features like step-by-step code highlighting, a CSS editor, LaTeX typesetting and more.","width":960,"height":700,"margin":0.05,"visibility":"self","published_at":"2020-08-22T02:11:32.013Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/d7488b0cd2ed29dbae4c39370304f425/thumb.jpg?1598471017","view_count":0,"user":{"id":1406683,"username":"aloisio","name":null,"description":null,"thumbnail_url":"https://www.gravatar.com/avatar/0db4b6ce5bc55fbbaa1027a183fb2fd6?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":true,"pro":true,"lite":false,"team_id":null,"settings":{"id":6048400,"present_controls":false,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}},"background_transition":"fade","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"black-mint","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":true,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":false,"slide_count":37,"rtl":false,"version":2,"collaborative":false,"deck_user_editor_limit":3,"data_updated_at":1598473197246,"font_typekit":"","font_google":"Trade Winds, Press Start 2P, Roboto Mono","time_limit":5,"navigation_mode":"default","upsizing_enabled":true,"notes":{"73a85e1f89f160399685908c3d43cffa":"","20faadec09a27f952dba94a6b278b67a":"","0228dc2a389bfd849b9c733356e17f1b":"This should look a bit different.","3fe8dcb856f1d33a035c517c0d98c059":"","ca251c7f7c277bb387f947531e87d18b":"","57da36494d84cec83f5046461ed0b69a":"","4de408cdfae2060d26181158171b20d3":"Example of an exported PDF. Notes appear as a black bar along the bottom, just like they do online."}}};
+
+
+			// Use local fonts
+			SLConfig.fonts_url = 'lib/fonts/';
+		</script>
+
+		<script src="lib/reveal.js"></script>
+		<script src="lib/reveal-plugins.js"></script>
+		<script src="lib/offline.js"></script>
+
+		<!-- Initialize the presentation -->
+		<script>
+			Reveal.initialize({
+				width: 960,
+				height: 700,
+				margin: 0.05,
+				
+
+				hash: true,
+				controls: true,
+				progress: true,
+				mouseWheel: false,
+				showNotes: false,
+				slideNumber: false,
+				fragmentInURL: true,
+
+				autoSlide: 0,
+				autoSlideStoppable: true,
+
+				autoAnimateMatcher: SL.deck.AutoAnimate.matcher,
+
+				center: false,
+				shuffle: false,
+				loop: false,
+				rtl: false,
+				navigationMode: "default",
+
+				transition: "slide",
+				backgroundTransition: "fade",
+
+				highlight: {
+					escapeHTML: false
+				},
+
+				plugins: [ RevealZoom, RevealNotes, RevealMarkdown, RevealHighlight ]
+			});
+		</script>
+
+		
+
+	</body>
+</html>
